@@ -1,14 +1,14 @@
-function displaymovie(moviename, year) {
-  const request = new XMLHttpRequest();
-  request.open("GET", "http://www.omdbapi.com/?apikey=e54d2018&t=" + moviename);
-  request.send(); 
-
-  request.addEventListener("load", function () {
-    const data = JSON.parse(this.responseText);
+const displayMovie = async (movieName, year) => {
+  try {
+    const response = await fetch(`http://www.omdbapi.com/?apikey=e54d2018&t=${movieName}`);
+    const data = await response.json();
     setMovie(data);
-  });
-}
-function setMovie(data) {
+  } catch (error) {
+    console.error('Error fetching the movie data:', error);
+  }
+};
+
+const setMovie = (data) => {
   const moviesContainer = document.querySelector(".movies");
 
   const card = document.createElement("div");
@@ -21,7 +21,7 @@ function setMovie(data) {
   img.src = data.Poster;
   img.alt = data.Title;
   img.classList.add("card-img-top");
-  movieCard.appendChild(img); 
+  movieCard.appendChild(img);
 
   const cardBody = document.createElement("div");
   cardBody.classList.add("card-body");
@@ -33,26 +33,26 @@ function setMovie(data) {
 
   const pGenre = document.createElement("p");
   pGenre.classList.add("card-text");
-  pGenre.textContent = "Genre: " + data.Genre;
+  pGenre.textContent = `Genre: ${data.Genre}`;
   cardBody.appendChild(pGenre);
 
   const pPlot = document.createElement("p");
   pPlot.classList.add("card-text");
-  pPlot.textContent = "Plot: " + data.Plot;
+  pPlot.textContent = `Plot: ${data.Plot}`;
   cardBody.appendChild(pPlot);
 
   movieCard.appendChild(cardBody);
   card.appendChild(movieCard);
 
   moviesContainer.appendChild(card);
-}
+};
 
-displaymovie("birdman+or");
-displaymovie("parasite");
-displaymovie("soul");
-displaymovie("the+silence+of+the+lambs");
-displaymovie("Truman+Show");
-displaymovie("V+for+Vendetta+");
-displaymovie("tenet");
-displaymovie("inception");
-displaymovie("joker");
+displayMovie("birdman+or");
+displayMovie("parasite");
+displayMovie("soul");
+displayMovie("the+silence+of+the+lambs");
+displayMovie("Truman+Show");
+displayMovie("V+for+Vendetta");
+displayMovie("tenet");
+displayMovie("inception");
+displayMovie("joker");
