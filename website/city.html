@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- Font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Favicon link -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <!-- css file's link -->
+    <link rel="stylesheet" href="projestyle.css" />
+
+    <title>şehrim</title>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="90">
+    <!-- navbar -->
+    <header class="header-wrapper">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="logo" class="img-fluid" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="anasayfa-hakimda.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="city.html">Şehrim</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mirasımız.html">Mirasımız</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ilgi_alanım.html">İlgi alanım</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login_html.html">Log in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="iletişim.html">İletişim</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- /navbar -->
+
+    <!-- title - slider -->
+    <section class="banner_wrapper" id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 oreder-lg-1 order-2 banner-content">
+            <h2 class="text-uppercase position-relative">ŞAM</h2>
+            <h5 class="text-uppercase">
+              suryie
+              <a href="https://maps.app.goo.gl/gZNmDHV1oeRKnBED9">
+                <img src="images/location-icon.png" alt="logo" />
+              </a>
+            </h5>
+            <div class="mt-5">
+              <a
+                class="main-btn primary-btn me-2"
+                href="#paragraf1"
+                type="button"
+                >GENEL BİLGİLER</a
+              >
+              <a class="main-btn primary-btn" href="#paragraf3" type="button"
+                >GEZİLECEK YERLER</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-7 order-lg-2 order-1">
+            <div class="top-center-img">
+              <section class="banner-slider mx-1 w-100">
+                <div
+                  id="my-slider"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                  data-bs-interval="10000"
+                >
+                  <!-- İçerik -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <a href="#paragraf4">
+                        <img
+                          src="images/emm.jpg"
+                          class="slider-image d-block w-100"
+                          alt="Slide 1"
+                        />
+                      </a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="#paragraf5">
+                        <img
+                          src="images/azem-palace.jpg"
+                          class="slider-image d-block w-100"
+                          alt="Slide 2"
+                        />
+                      </a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="#paragraf5">
+                        <img
+                          src="images/azzem.jpg"
+                          class="slider-image d-block w-100"
+                          alt="Slide 3"
+                        />
+                      </a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="#paragraf6">
+                        <img
+                          src="images/hamidiye.jpg"
+                          class="slider-image d-block w-100"
+                          alt="Slide 4"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Ok butonları -->
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#my-slider"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Önceki</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#my-slider"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Sonraki</span>
+                  </button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /title - slider -->
+
+    <!--main -->
+    <main>
+      <section id="paragraf1">
+        <div class="container my-4">
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <img
+                src="images/sam.jpg"
+                alt=""
+                class="img-fluid content-img"
+              />
+            </div>
+            <div class="col-lg-7 mb-4 mb-lg-0" id="content">
+              <h3>ŞAM</h3>
+              <p>
+                Şam veya Dimaşk , Suriye'nin başkentidir. Ayrıca, Şam Valiliğinin 
+                ve Rif Şam Valiliği'nin de idari başkentidir. Nüfus; 3,410,000 <br />
+                Ortadoğu’nun en eski şehri olarak bilinen Şam, dünya tarihinde hala 
+                varlığını sürdüren en eski başkent olarak anılıyor
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="paragraf2">
+        <div class="container my-2">
+          <div class="row align-items-center">
+            <div class="col-lg-7 mb-4 mb-lg-0" id="content">
+              <h3>TARİH</h3>
+              <p>
+                Şam veya Dimaşk , Suriye'nin başkentidir. Ayrıca, Şam Valiliğinin 
+                ve Rif Şam Valiliği'nin de idari başkentidir.
+                Dünya tarihindeki ilk cinayet olan Kabil ile Habil olayının Şam'ın 
+                kuzeyindeki Kasiyun Dağı'nda gerçekleştiğine inanılır. 
+                En bilinen tarihi mekanlardan biri Emevi Camii'dir. Ayrıca, bazı Müslümanlar 
+                arasında ahir zamanda Mehdi'nin ve İsa'nın bu camiye ineceği inancı vardır. 
+                1516 yılında Yavuz Sultan Selim'in Suriye'yi ele geçirmesiyle oluşturulan Şam 
+                Vilayetinin merkezi haline gelen Şam kenti, hac yolu üzerindeki toplanma 
+                noktası olması nedeniyle de ticari yönden önemini korumuştur.
+              </p>
+            </div>
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <img
+                src="images/tarh.jpg"
+                alt=""
+                class="img-fluid content-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="paragraf3">
+        <div class="container my-4">
+          <div class="row align-items-center">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <img
+                src="images/gezz.jpg"
+                alt=""
+                class="img-fluid content-img"
+              />
+            </div>
+            <div class="col-lg-8 mb-4 mb-lg-0" id="content">
+              <h3>GEZİLECEK YERLER</h3>
+              <p>
+                Mimari ve kültürel açıdan Osmanlı döneminin izlerini taşıyan Şam 
+                sokaklarında gün boyunca gezip, mimari güzelliklerini keşfetmenin 
+                yanı sıra leziz yöresel yemekleri de tadabilirsiniz.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="paragraf4">
+        <div class="container my-2">
+          <div class="row align-items-center">
+            <div class="col-lg-7 mb-4 mb-lg-0" id="content">
+              <h3>Emeviye Camisi</h3>
+              <p>
+                Suriye’deki iç çatışmalar sonrasında epey zarar gören Emeviye Camisi,
+                Aramiler ve Romalılar döneminde tapınak, Bizanslılar zamanında ise 
+                katedral olarak kullanıldı. Pek çok din için önemli bir yere sahip 
+                olan bu tarihi cami, UNESCO Dünya Mirası Listesinde yer alıyor.
+              </p>
+            </div>
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <img
+                src="images/emm.jpg"
+                alt=""
+                class="img-fluid content-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="paragraf5">
+        <div class="container my-4">
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <img
+                src="images/azemm.jpg"
+                alt=""
+                class="img-fluid content-img"
+              />
+            </div>
+            <div class="col-lg-7 mb-4 mb-lg-0" id="content">
+              <h3>Azem Sarayı</h3>
+              <p>
+                Osmanlılar zamanında Şam Valisi olan Esad tarafından yaptırılan 
+                Azem Sarayı, hem ülkenin hem de şehrin en etkileyici yapılarından.
+                Günümüzde müze olarak kullanılan bu sarayda birbirinden güzel 
+                el sanatı eserleri sergileniyor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="paragraf6">
+        <div class="container mt-2">
+          <div class="row align-items-center">
+            <div class="col-lg-7 mb-4 mb-lg-0" id="content">
+              <h3>Hamidiye Çarşısı</h3>
+              <p>
+                Eski kent surları içerisinde konumlanan Hamidiye Çarşısı, 
+                şehrin en kalabalık ve hareketli yerlerinden. Osmanlı döneminde 
+                inşa edilen bu tarihi çarşıdan geleneksel Suriye el sanatları, 
+                gümüş ve altın takılar, giyim, kumaş gibi pek çok eşya ve malzeme 
+                satın alabilirsiniz.
+              </p>
+            </div>
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <img
+                src="images/hamedd.jpg"
+                alt=""
+                class="img-fluid content-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- /main -->
+
+    <!-- Bootstrap Bundle link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <!-- dark mood için javascript -->
+    <script>
+      var moon_icon = document.getElementById("moon_icon");
+      moon_icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+      };
+    </script>
+
+    <!-- footer -->
+    <footer class="container-fluid px-0">
+      <img
+        src="images/ffoter.jpg"
+        alt="footer image"
+        class="image-fluid d-block w-100"
+      />
+    </footer>
+    <!--/footer -->
+  </body>
+</html>
