@@ -1,58 +1,99 @@
-const displayMovie = async (movieName, year) => {
-  try {
-    const response = await fetch(`http://www.omdbapi.com/?apikey=e54d2018&t=${movieName}`);
-    const data = await response.json();
-    setMovie(data);
-  } catch (error) {
-    console.error('Error fetching the movie data:', error);
-  }
-};
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- Font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Favicon link -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
 
-const setMovie = (data) => {
-  const moviesContainer = document.querySelector(".movies");
+    <!-- css file's link -->
+    <link rel="stylesheet" href="projestyle.css" />
+    <title>İlgi alanım</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="header-wrapper">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="logo" class="img-fluid" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-  const card = document.createElement("div");
-  card.classList.add("col-md-3", "col-lg-4");
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="city.html">Şehrim</a> 
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mirasımız.html">Mirasımız</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="ilgi_alanım.html"
+                  >İlgi alanım</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login_html.html">Log in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="iletişim.html">İletişim</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- /navbar -->
 
-  const movieCard = document.createElement("div");
-  movieCard.classList.add("card_movie");
+    <div class="container mb-5">
+      <h2 class="my-3 text-center">En sevdiğim filmler</h2>
+      <div class="row movies"></div>
+    </div>
 
-  const img = document.createElement("img");
-  img.src = data.Poster;
-  img.alt = data.Title;
-  img.classList.add("card-img-top");
-  movieCard.appendChild(img);
-
-  const cardBody = document.createElement("div");
-  cardBody.classList.add("card-body");
-
-  const h5 = document.createElement("h5");
-  h5.classList.add("card-title");
-  h5.textContent = data.Title;
-  cardBody.appendChild(h5);
-
-  const pGenre = document.createElement("p");
-  pGenre.classList.add("card-text");
-  pGenre.textContent = `Genre: ${data.Genre}`;
-  cardBody.appendChild(pGenre);
-
-  const pPlot = document.createElement("p");
-  pPlot.classList.add("card-text");
-  pPlot.textContent = `Plot: ${data.Plot}`;
-  cardBody.appendChild(pPlot);
-
-  movieCard.appendChild(cardBody);
-  card.appendChild(movieCard);
-
-  moviesContainer.appendChild(card);
-};
-
-displayMovie("birdman+or");
-displayMovie("parasite");
-displayMovie("soul");
-displayMovie("the+silence+of+the+lambs");
-displayMovie("Truman+Show");
-displayMovie("V+for+Vendetta");
-displayMovie("tenet");
-displayMovie("inception");
-displayMovie("joker");
+    <script src="ilgi_alanım.js"></script>
+    <!-- Bootstrap Bundle link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
